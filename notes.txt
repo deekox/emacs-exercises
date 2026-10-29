@@ -1,0 +1,2 @@
+C-u C-x C-e	Evaluate expression and put the resutl on the buffer
+
