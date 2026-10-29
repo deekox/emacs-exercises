@@ -41,3 +41,10 @@
 
 (defun do () "Hi")
 
+(defun msg () (message "Hi"))
+(msg)
+
+(defun print-3 (arg)
+  "print provided char 3 times"
+  (interactive "cWhat char: ")
+  (message "%c%c%c" arg arg arg))

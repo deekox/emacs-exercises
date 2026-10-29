@@ -1,18 +1,32 @@
 ===== Useful links =====
 
 Emacs Lisp tutorial:
-TODO:
+https://www.gnu.org/software/emacs/manual/html_mono/eintr.html
 
-Emacs Lisp refernce:
+Emacs Lisp Refernce Manual:
 https://www.gnu.org/software/emacs/manual/html_mono/elisp.html
+
+
+==== funcitons ======
+
+buffer-name
+buffer-file-name
+
+load PATH  loads a file and evaluates it
+
+
+
 
 ===== HotKeys =====
 
 C-u C-x C-e
     Evaluate expression and put the resutl on the buffer
 
+Below NUM is called Prefix Argument
 C-u NUM M-x forward-sentence
     Call NUM times an interactive f. forward-sentence
 C-u NUM M-e
     Same as above (M-e is a hotkey for forward-sentence)
-    
+M-NUM M-x function-name
+    Same as above but number is provided as keystroke
+   
