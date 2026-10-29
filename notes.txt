@@ -1,2 +1,18 @@
-C-u C-x C-e	Evaluate expression and put the resutl on the buffer
+===== Useful links =====
 
+Emacs Lisp tutorial:
+TODO:
+
+Emacs Lisp refernce:
+https://www.gnu.org/software/emacs/manual/html_mono/elisp.html
+
+===== HotKeys =====
+
+C-u C-x C-e
+    Evaluate expression and put the resutl on the buffer
+
+C-u NUM M-x forward-sentence
+    Call NUM times an interactive f. forward-sentence
+C-u NUM M-e
+    Same as above (M-e is a hotkey for forward-sentence)
+    
