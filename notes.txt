@@ -7,6 +7,49 @@ Emacs Lisp Refernce Manual:
 https://www.gnu.org/software/emacs/manual/html_mono/elisp.html
 
 
+(setq variable_name value)
+
+(defun fun_name (arg1_name arg2_name arg3_name ....)
+       "documentation string"
+       (interactive ...)
+       function_body)
+
+(let ((var_name1 val1) var_name2 (var_name3 value3))
+     let_body)
+
+
+
+
+
+===== important elisp info =====
+
+
+There are two ways of variable scoping/binding:
+1. dynamic (default)
+(setq x 0)
+(defun getx () x)
+(setq x 1)
+(let ((x 2))
+  (message "the x is %d" (getx)))    => "the x is 2"
+
+this is because 'x' in getx is searched on the stack and the closest 'x' on the stack is the one from let statement
+
+2. lexical/static (turned on when ;;; -*- lexical-binding: t -*- is at the top of buffer
+;;; -*- lexical-binding: t -*-
+(setq x 0)
+(defun getx () x)
+(setq x 1)
+(let ((x 2))
+  (message "the x is %d" (getx)))    => "the x is 1"
+  
+this is because 'x' in getx is searched in global scope
+note: (defvar variable_name) makes variable 'variable_name' dynamic even when in lexical-binding mode
+
+
+
+
+
+
 ==== funcitons ======
 
 buffer-name

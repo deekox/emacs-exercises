@@ -1,13 +1,3 @@
-
-
-
-
-
-
-
-
-
-
 (message "point-max is %d\nfilename: %s\nbuffer-name: %s\nsurrent point position: %d"
 	 (point-max)
 	 (buffer-file-name)
@@ -48,3 +38,31 @@
   "print provided char 3 times"
   (interactive "cWhat char: ")
   (message "%c%c%c" arg arg arg))
+
+(setq z "ojeja")
+
+(let (x
+      (y "dupa")
+      (z 'jaros))
+  (message "x: %s\ny: %s\nz: %s" x y z))
+(message "a tu z: %s" z)
+
+
+     
+(let ((x "Hello"))
+  ((defun fun ()
+     (message "this is x: "))
+   (fun)))
+
+
+(let ((x "hello"))
+  (message "the x is %s" x))
+
+
+(setq x 0)
+(defun getx () x)
+(setq x 1)
+(getx)
+
+
+
