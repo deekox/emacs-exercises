@@ -1,11 +1,21 @@
+;; -*- lexical-binding: t -*-
+(setq var 1)
+
+(defun getvar () var)
+
+(getvar)
+
+(let ((var 3))
+  (message "the var: %d" (getvar)))
+
+
 (message "point-max is %d\nfilename: %s\nbuffer-name: %s\nsurrent point position: %d"
 	 (point-max)
 	 (buffer-file-name)
 	 (buffer-name)
 	 (point))
 
-
-
+    
 
 (message "dupa")
 
@@ -64,5 +74,16 @@
 (setq x 1)
 (getx)
 
+(defun double (arg)
+  "doubles the argument"
+  (interactive "p")
+  (message "result is %d" (* 2 arg)))
 
+(SAVE-excursion (message "dupa"))
+(save-excursion (append-to-buffer (current-buffer) 1 10))
+
+(defun check-fill (arg)
+  (if (> fill-column arg)
+      (message "greater")
+    (message "not greater")))
 

@@ -14,10 +14,21 @@ https://www.gnu.org/software/emacs/manual/html_mono/elisp.html
        (interactive ...)
        function_body)
 
+adding (interactive) even without any parmeters makes function eligible to M-x fun-name and keyboar shortcut binding
+
+       
 (let ((var_name1 val1) var_name2 (var_name3 value3))
      let_body)
 
+(if true-or-false-test
+    action-to-carry-out-if-test-is-true
+  action-to-carry-out-if-test-is-false)
 
+true-or-false-test:
+for numbers: > = < equal
+for strings: equal
+
+ 
 
 
 
@@ -57,6 +68,9 @@ buffer-file-name
 
 load PATH  loads a file and evaluates it
 
+insert-buffer-substring buffer pos_start pos_end
+
+(insert-buffer-substring (other-buffer) 44 54)
 
 
 
@@ -73,3 +87,9 @@ C-u NUM M-e
 M-NUM M-x function-name
     Same as above but number is provided as keystroke
    
+M-. go to f. definition (xref-find-definitions)
+M-, return from f.definition
+
+C-x h  mark-whole buffer
+C-x spc   rectangle mark mode
+
