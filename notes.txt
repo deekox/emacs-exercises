@@ -1,11 +1,17 @@
-===== Useful links =====
+ Buffer -> a file, can be not visible at the moment
+Window -> a split, every W. shows some buffer
+Frame -> what is called in modern GUI a window
+ C-x 5 2 - open new graphical window
 
-Emacs Lisp tutorial:
-https://www.gnu.org/software/emacs/manual/html_mono/eintr.html
 
-Emacs Lisp Refernce Manual:
-https://www.gnu.org/software/emacs/manual/html_mono/elisp.html
 
+(defun append ()
+  (interactive)
+  (save-excursion
+    (goto-char (point-max))
+    (insert-buffer-substring (current-buffer) ((region-beginning) (region-end)))))
+     
+(fmakunbound 'append)
 
 (setq variable_name value)
 
@@ -16,6 +22,12 @@ https://www.gnu.org/software/emacs/manual/html_mono/elisp.html
 
 adding (interactive) even without any parmeters makes function eligible to M-x fun-name and keyboar shortcut binding
 
+(interactive "p") ; p - means prefix argument that will be bound to arg argument
+(interactive "p\ncZap to char: ") 'p' - prefix, 'c' - char
+
+'p' <- prefix argument that 
+'c' <- char
+
        
 (let ((var_name1 val1) var_name2 (var_name3 value3))
      let_body)
@@ -23,7 +35,8 @@ adding (interactive) even without any parmeters makes function eligible to M-x f
 (if true-or-false-test
     action-to-carry-out-if-test-is-true
   action-to-carry-out-if-test-is-false)
-
+(region-beginning)622
+(region-end)879
 true-or-false-test:
 for numbers: > = < equal
 for strings: equal
@@ -90,6 +103,20 @@ M-NUM M-x function-name
 M-. go to f. definition (xref-find-definitions)
 M-, return from f.definition
 
-C-x h  mark-whole buffer
+C-x h  mark-whole-buffer
 C-x spc   rectangle mark mode
 
+M-x M-p  - recall last command that has been run with M-x
+
+
+
+===== Useful links =====
+
+Emacs Lisp tutorial:
+https://www.gnu.org/software/emacs/manual/html_mono/eintr.html
+
+Emacs Lisp Refernce Manual:
+https://www.gnu.org/software/emacs/manual/html_mono/elisp.html
+
+
+========
